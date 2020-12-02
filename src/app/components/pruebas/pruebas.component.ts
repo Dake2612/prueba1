@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pruebas.component.html',
   styleUrls: ['./pruebas.component.css']
 })
-export class PruebasComponent implements OnInit {
+export class PruebasComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private _http: HttpClient
+  ) { 
+    this._http.get('https://github.com/Dake2612/prueba1/commits/main').subscribe
+    (data => console.log(data))
   }
 
 }

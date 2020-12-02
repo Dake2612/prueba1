@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MiComponente } from './components/mi-componente/mi-componente.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { PruebasComponent } from './components/pruebas/pruebas.component';
     PruebasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
